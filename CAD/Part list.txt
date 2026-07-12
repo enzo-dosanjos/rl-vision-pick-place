@@ -1,0 +1,23 @@
+HTD 3M belt
+
+6808 bearings
+
+608 bearings
+
+M3 screws
+
+
+
+Base :
+- 6812 2RS bearing
+- M3 Female to female 10mm standoffs
+- M3 Socket Head Screws
+- M3 flat head screws
+
+Assemble:
+- rubber ring around coupler
+- Rotating plate : flat head screws
+
+
+Todo :
+- put standoffs in housing for support
