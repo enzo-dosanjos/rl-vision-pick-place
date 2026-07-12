@@ -1,20 +1,54 @@
-The Robot base is the project origin.
-one global coordinate system
-Positive axes
+Joints :
+J1 — Base Yaw
+J2 — Shoulder Pitch
+J3 — Elbow Pitch
+J4 — Wrist Yaw
+J5 — Wrist Pitch
+J6 — Wrist Roll
+J7 — Parallel Gripper
 
-Skeleton :
-- Define a single source of truth for the entire robotic cell
-- Every assembly shall reference the skeleton rather than other assemblies whenever practical
-- Define all global coordinate systems
-- Define all major workspaces
-- Define robot origin
-- Define camera origin
-- Define future conveyor location
-- Define pickup and drop zones
-- Define calibration plate location
-- Define electronics envelope
-- Define maintenance clearances
-- Support automatic URDF generation
-- Support MuJoCo model generation
-- Support ROS 2 TF tree creation
-- Construction geometry only
+| Joint   | Motor Location |       Transmission       |
+| ------- | -------------- | ------------------------ |
+| J1      | Base           | Direct w/ bearings       |
+| J2      | Shoulder       | Direct w/ bearings       |
+| J3      | Shoulder       | Timing belt              |
+| J4      | Forearm        | Direct                   |
+| J5      | Wrist          | Direct                   |
+| J6      | Wrist          | Direct                   |
+| Gripper | Gripper        | Direct                   |
+
+lower moving inertia and reduce strain on motors moving the most mass.
+
+
+The workspace is defined after camera calibration.
+
+There are no permanently defined physical pickup or placement areas. Object Position is sampled randomly and Goal position is sample independently. Object and goal shall remain within the reachable workspace and respect edge clearances
+
+
+Ros 2 data flow :
+
+Camera
+   ↓
+Camera Node
+   ↓
+Calibration Node
+   ↓
+Detection Node
+   ↓
+Pose Estimation Node
+   ↓
+Task Manager
+   ↓
+Policy / Planner
+   ↓
+Robot Controller
+   ↓
+Hardware Interface
+
+
+The PPO policy observes structured state only :
+Joint Positions
+Joint Velocities
+Gripper State
+Object Pose
+Goal Pose
