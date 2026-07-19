@@ -17,7 +17,9 @@ J7 — Parallel Gripper
 | J6      | Wrist          | Direct                   |
 | Gripper | Gripper        | Direct                   |
 
-lower moving inertia and reduce strain on motors moving the most mass.
+lower moving inertia as half of the motors ar close to the base and reduce strain on motors moving the most mass using bearings and shafts.
+
+For J2, the rotating hub acts as a shaft. The hub has thick walls to be stiff enough to avoid the introduction of torsional compliance and reduce bearing support
 
 
 The workspace is defined after camera calibration.
