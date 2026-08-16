@@ -1,23 +1,31 @@
-HTD 3M belt
-
-6808 bearings
-
-608 bearings
-
-M3 screws
-
-
-
 Base :
 - 6812 2RS bearing
-- M3 Female to female 10mm standoffs
+- M3 Female to female 10mm standoffs x 10
 - M3 Socket Head Screws
 - M3 flat head screws
+- STS3215
+
+Shoulder :
+- 608 bearings x 2
+- 6808 bearings
+- STS3215 x 2
+
+J3 timing pulley belt :
+- GT2 timing pulley with set screw
+- HTD 3M belt
 
 Assemble:
 - rubber ring around coupler
 - Rotating plate : flat head screws
+- M3 screws
 
 
 Todo :
-- put standoffs in housing for support
+- Housing : put standoffs in housing for support
+- Rotating hub : put standoffs in rotating hub to fix the 2 together
+- Upperarm : Add holes for shoulder to upperarm joint
+- Upperarm : Split for easier printing, add standoff in upperarm middle part, head and screw holes 
+- Rotating hub seating : left bearing connection (shoulder frames goes inside rotating hub and goes around bearing)
+- Rotating hub : Motor support goes on a plaque that screws in the standoffs that goes inside the rotating hub's left and right parts to connect them
+allows to have the screws hidden in the support to connect the motor
+- add rounds everywhere
